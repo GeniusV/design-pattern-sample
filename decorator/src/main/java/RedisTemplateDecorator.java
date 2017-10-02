@@ -7,6 +7,13 @@ public class RedisTemplateDecorator implements RedisTemplate {
 
     private RedisTemplate redisTemplate;
 
+    public RedisTemplateDecorator(RedisTemplate redisTemplate) {
+        this.redisTemplate = redisTemplate;
+    }
+
+    public RedisTemplateDecorator() {
+    }
+
     @Override
     public void save(String key, String value) {
         redisTemplate.save(key, value);
@@ -16,13 +23,6 @@ public class RedisTemplateDecorator implements RedisTemplate {
     public String read(String key) {
         String result = redisTemplate.read(key);
         return result;
-    }
-
-    public RedisTemplateDecorator(RedisTemplate redisTemplate) {
-        this.redisTemplate = redisTemplate;
-    }
-
-    public RedisTemplateDecorator() {
     }
 
     public RedisTemplate getRedisTemplate() {

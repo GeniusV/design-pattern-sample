@@ -1,5 +1,3 @@
-import com.sun.tools.internal.ws.resources.WebserviceapMessages;
-
 /**
  * Copyright 2017 GeniusV
  * All rights reserved.
@@ -9,6 +7,7 @@ public class WebSessionManager extends SessionManager {
 
     public WebSessionManager() {
     }
+
     public WebSessionManager(SessionRepository sessionRepository) {
         super(sessionRepository);
     }

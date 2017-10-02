@@ -1,5 +1,3 @@
-import com.sun.tools.corba.se.idl.StringGen;
-
 /**
  * Copyright 2017 GeniusV
  * All rights reserved.
@@ -7,6 +5,6 @@ import com.sun.tools.corba.se.idl.StringGen;
  */
 public class RedisRepository {
     public void insert(String key, String value) {
-        System.out.println("insert: " +key + value);
+        System.out.println("insert: " + key + value);
     }
 }

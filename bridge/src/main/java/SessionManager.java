@@ -9,7 +9,12 @@ public abstract class SessionManager {
     public SessionManager() {
     }
 
-    public  void createSession(String session){
+    public SessionManager(SessionRepository sessionRepository) {
+
+        this.sessionRepository = sessionRepository;
+    }
+
+    public void createSession(String session) {
         sessionRepository.saveSession(session);
     }
 
@@ -18,11 +23,6 @@ public abstract class SessionManager {
     }
 
     public void setSessionRepository(SessionRepository sessionRepository) {
-        this.sessionRepository = sessionRepository;
-    }
-
-    public SessionManager(SessionRepository sessionRepository) {
-
         this.sessionRepository = sessionRepository;
     }
 }
